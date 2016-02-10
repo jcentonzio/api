@@ -1,0 +1,28 @@
+server: &server
+  adapter: postgresql
+  encoding: unicode
+  reconnect: fasle
+  pool: 5
+  host: localhost
+  port: 5432
+
+development: 
+  adapter: postgresql
+  database: db/api_development
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  database: db/api_test
+  pool: 5
+  timeout: 5000
+
+production: 
+  <<: *server
+  adapter: postgresql
+  database: db/api_production
+  pool: 5
+  timeout: 5000     
+
+

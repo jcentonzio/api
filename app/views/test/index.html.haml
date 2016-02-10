@@ -1,0 +1,38 @@
+.row
+  
+  .panel.panel-default
+    .col-md-12
+      .notice
+    .panel-heading
+      %h3.panel-title Ingresar tarea
+    .panel-body  
+
+      
+      .form-group
+        %label{:for => "project_name"} Nombre del proyecto
+        %input.form-control{:placeholder => "Ingresa el nombre del proyecto", :id => "project_name", :type => "text"}/
+        %span.help-block
+      .form-group
+        %label{:for => "email"} Email
+        %input.form-control{:placeholder => "Ingresa tu email", :type => "text", :id => "email"}/
+        %span.help-block 
+  
+      .form-group
+        %label{:for => "time"} Objetivo
+        %textarea.form-control{:rows => "3", :id=> "description"}
+        %span.help-block   
+
+      %button.btn.btn-success{:type => "submit", :id=>"add-task"} Enviar
+
+
+%table.table
+  %caption Tareas
+  %thead
+    %tr
+
+      %th Nombre del proyecto
+      %th Email
+      %th Objetivo
+      %th Fecha
+  %tbody{:id => "task"}
+     
